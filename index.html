@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"> </script>
+</head>
+<body>
+
+    <a-scene background = "color: #000000">
+
+        <!--Camera-->
+        <a-entity position = "0 0 5">
+            <a-camera></a-camera>
+        </a-entity>
+
+        <!--Entity for the PLANE-->
+        <a-entity>
+            <a-plane position = "0 0 0" rotation = "-90 -90 -90" height = "4" width = "8" color = "deeppink"></a-plane>
+        </a-entity>
+
+        <!--Entity for the ROBOT-->
+        <a-entity>
+            <!--Toes-->
+            <a-sphere position = "-0.4 0.09 0.3" rotation = "0 -45 0" radius = "0.28" color = "lemonchiffon" ></a-sphere>
+            <a-sphere position = "0.4 0.09 0.3" rotation = "0 -45 0" radius = "0.28" color = "lemonchiffon"></a-sphere>
+
+            <!--Legs-->
+            <a-cylinder position = "-0.4 0.6 0.3" rotation = "0 0 0" radius = "0.18" height = "0.5" color = "mediumturquoise"></a-cylinder>
+            <a-cylinder position = "0.4 0.6 0.3" rotation = "0 0 0" radius = "0.18" height = "0.5" color = "mediumturquoise"></a-cylinder>
+
+            <!--Body-->
+            <a-box position = "0 1.12 0.3" rotation = "90 0 0" height = "1.35" width = "1.2" color = "mediumturquoise"></a-box>
+            <a-box position = "0 1.21 0.45" rotation = "90 0 0" height = "1.1" width = "1" length = "0.2" color = "lemonchiffon"></a-box>
+
+            <!--Face-->
+            <a-sphere position = "0 2 0.3" rotation = "0 0 0" radius = "1" color = "mediumturquoise"></a-sphere>
+
+            <!--Hands-->
+            <a-cylinder position = "-0.9 1.35 0.3" rotation = "0 0 50" radius = "0.18" height = "1.2" color = "mediumturquoise"></a-cylinder>
+            <a-sphere position = "-1.35 1.75 0.3" rotation = "0 0 0" radius = "0.28" color = "lemonchiffon"></a-sphere>
+            <a-cylinder position = "0.8 0.7 0.3" rotation = "0 0 -140" radius = "0.18" height = "1" color = "mediumturquoise"></a-cylinder>
+            <a-sphere position = "1.12 0.35 0.3" rotation = "0 0 0" radius = "0.28" color = "lemonchiffon"></a-sphere>
+
+            <!--Eye Balls-->
+            <a-sphere position = "-0.3 2.2 1.05" rotation = "0 0 0" radius = "0.28" color = "lemonchiffon"></a-sphere>
+            <a-sphere position = "0.3 2.2 1.05" rotation = "0 0 0" radius = "0.28" color = "lemonchiffon"></a-sphere>
+
+            <!--Eyes (For Animation)-->
+            <a-sphere position = "-0.3 2.2 1.312" rotation = "0 0 0" animation = "property: position; from: -0.3 2.2 1.312; to: -0.3 0.2 1.312; dir: alternate; loop: true; dur: 1000;" radius = "0.07" color = "black"></a-sphere>
+            <a-sphere position = "0.3 2.2 1.312" rotation = "0 0 0" radius = "0.07" color = "black"></a-sphere>
+
+            <!--Bell-->
+            <a-sphere position = "0 1.25 1.08" rotation = "0 0 0" radius = "0.09" color = "gold"></a-sphere>
+
+          
+
+        </a-entity>
+
+        <a-entity geometry = "primitive: cylinder; openEnded: true; thetaLength: 5"
+          material = "side: double" color = "red" position = "0 0.75 1.7" rotation = "-90 90 0" height = "1"></a-entity>
+
+    </a-scene>
+
+</body>
+</html>
